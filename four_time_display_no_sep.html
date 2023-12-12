@@ -1,0 +1,47 @@
+AIM : Create simple web page that takes a number as input and display it four times in a row (separated by blank spaces), and then four times in the next row, with no separation.
+Like-
+Enter a digit: 22 Expected Output: 22 22 22 22
+22222222
+22 22 22 22
+22222222
+
+
+___
+
+use console App(.net framework)
+
+
+CODE:-
+_________________________________________________________________________________________________________________________
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the number: ");
+            int a = Convert.ToInt32(Console.ReadLine());
+
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write("{0} ", a);
+                }
+                Console.Write("\n");
+                for (int j = 0; j < 6; j++)
+                {
+                    Console.Write("{0}", a);
+                }
+                Console.Write("\n");
+            }
+            Console.ReadKey();
+        }
+    }
+}

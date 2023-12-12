@@ -1,0 +1,79 @@
+Create a simple web page to demonstrate use of built in DivideByZeroException and IndexOutOfRangeException
+exceptions using textbox and label control.
+
+console app(.net framework)
+
+_______________________________________________________________________________________________________________________________________
+CODE:
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp12
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+     
+            {
+                Console.WriteLine("Exceptions Demo");
+
+                // Divide By Zero Exception
+                DivideByZeroExceptionDemo();
+
+                // Index Out Of Range Exception
+                IndexOutOfRangeExceptionDemo();
+
+                Console.ReadLine(); // Keep the console open to view the results
+            }
+
+             void DivideByZeroExceptionDemo()
+            {
+                Console.WriteLine("\nDivide By Zero Exception Demo");
+
+                Console.Write("Enter a number: ");
+                string input = Console.ReadLine();
+
+                try
+                {
+                    int number = int.Parse(input);
+                    int result = 10 / number;
+                    Console.WriteLine("Result: " + result);
+                }
+                catch (DivideByZeroException)
+                {
+                    Console.WriteLine("Divide By Zero Exception!");
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                }
+            }
+
+             void IndexOutOfRangeExceptionDemo()
+            {
+                Console.WriteLine("\nIndex Out Of Range Exception Demo");
+
+                int[] array = { 1 };
+
+                try
+                {
+                    int value = array[1];
+                    Console.WriteLine("Value: " + value);
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    Console.WriteLine("Index Out Of Range Exception!");
+                }
+            }
+        }
+
+    }
+}
+

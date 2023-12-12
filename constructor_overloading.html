@@ -1,0 +1,49 @@
+Aim: Write a program in C# to demonstrate Constructor Overloading.
+
+use- Console app(.Net application)
+
+Add a name space as SalaryConstructor in the first templete
+
+then add new item / class template
+
+name it as Salary.cs
+
+
+_______________________________________________________________________________________________________________________________________________________________
+CODE:
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SalaryConstructure
+{
+    class Salary
+    {
+        int basic, ta, da, hra;
+        public Salary()
+        {
+            da = 9000;
+            hra = 6000;
+        }
+        public void getdata()
+        {
+            Console.Write("Enter Basic Salary : ");
+            basic = int.Parse(Console.ReadLine());
+            Console.Write("Enter Travelling Allowance :");
+            ta = int.Parse(Console.ReadLine());
+        }
+        public void showdata()
+        {
+            Console.WriteLine("Basic Salary :" + basic);
+            Console.WriteLine("Dearness allowance:" + da);
+            Console.WriteLine("Housing rent allowence:" + hra);
+            Console.WriteLine("Gross Salary:" + (basic + da + hra));
+            Console.WriteLine("--your-name--");
+            Console.ReadLine();
+        }
+        }
+    }

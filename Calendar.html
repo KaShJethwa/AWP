@@ -1,0 +1,48 @@
+//Asp web application(.net Framework )
+
+next
+
+empty temp
+
+add new web form from  project/new items/web forms , choose 2 calanders and 1 label
+
+design:--
+------------------------------------------------------------------------------------------------------------------------------------------------
+CODE:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+namespace WebApplication5
+{
+    public partial class WebForm1 : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Calendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            Label1.Text = "Selected Date:" + Calendar1.SelectedDate.ToShortDateString();
+            Calendar1.SelectedDayStyle.BorderStyle = BorderStyle.Double;
+        }
+
+       
+
+        protected void Calendar2_SelectionChanged1(object sender, EventArgs e)
+        {
+            DateTime start = Calendar1.SelectedDate;
+            DateTime end = Calendar2.SelectedDate;
+            TimeSpan difference = end.Subtract(start);
+            Label1.Text = difference.TotalDays.ToString();
+
+
+        }
+    }
+    }
+

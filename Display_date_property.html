@@ -1,0 +1,52 @@
+Create a simple web page to display the Date properties (year,
+month, day, hour, minute, second, millisecond etc.) as well as to display the number of days of the year between two specified years.
+
+CONSOLE APP(.NET FRAMEWORK)
+
+__________________________________________________________________________________________________________________
+CODE:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            System.DateTime moment = new System.DateTime(2016, 8, 16, 3, 57, 32, 11);
+
+            Console.WriteLine("year = " + moment.Year);
+
+            Console.WriteLine("month = " + moment.Month);
+
+            Console.WriteLine("day = " + moment.Day);
+
+            Console.WriteLine("hour = " + moment.Hour);
+
+            Console.WriteLine("minute = " + moment.Minute);
+
+            Console.WriteLine("second = " + moment.Second);
+
+            Console.WriteLine("millisecond = " + moment.Millisecond);
+
+
+
+            DateTime dec31 = new DateTime(2000, 12, 31);
+            for (int ctr = 0; ctr <= 20; ctr++)
+            {
+                DateTime dateToDisplay = dec31.AddYears(ctr);
+                Console.WriteLine("{0:d}: day {1} of {2} {3}", dateToDisplay,
+                                  dateToDisplay.DayOfYear,
+                                  dateToDisplay.Year,
+                                  DateTime.IsLeapYear(dateToDisplay.Year) ?
+                                                      "(Leap Year)" : "");
+                Console.ReadKey();
+            }
+        }
+    }
+}

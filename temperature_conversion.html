@@ -1,0 +1,33 @@
+Aim : write a program in C# to demonstrate temperature conversion.
+
+console app(.net framework)
+
+
+
+________________________________________________________________________________________________________________________________________________________________
+CODE:
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int celsius, faren;
+            Console.WriteLine("Enter the temperature in Celsius(°C):");
+            celsius = int.Parse(Console.ReadLine());
+            faren = (celsius * 9) / 5 + 32;
+            Console.WriteLine("Temperature in Farenheit is (°F): " + faren);
+            Console.WriteLine("--your-name--");
+            Console.ReadLine();
+
+        }
+    }
+}
